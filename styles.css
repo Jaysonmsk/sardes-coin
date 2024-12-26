@@ -1,0 +1,163 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #f4b400, #333);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sticky-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sticky-nav ul li {
+    margin: 0 15px;
+}
+
+.sticky-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sticky-nav ul li a:hover {
+    color: #f4b400;
+}
+
+.parallax {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 400px;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background: #f4b400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #333;
+    color: #f4b400;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.roadmap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f4b400;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top:hover {
+    background: #333;
+    color: #f4b400;
+}
+
+.settings {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.settings select,
+.settings button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sticky-nav ul {
+        flex-direction: column;
+    }
+    .roadmap {
+        grid-template-columns: 1fr;
+    }
+}
